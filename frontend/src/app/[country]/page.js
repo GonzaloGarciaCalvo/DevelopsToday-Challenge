@@ -43,7 +43,15 @@ export default function Page({ params }) {
   return (
     <div>
       <section className='flex flex-row justify-center py-4 '>
-        {loading ? <h1>Loading...</h1> : null}
+        {
+          loading ? 
+          <div className='flex flex-col justify-center items-center min-h-screen'>
+            <h1 className='text-4xl p-10'>Loading</h1>
+            <div className=' animate-ping bg-slate-100 rounded-full h-16 w-16'></div>
+          </div> 
+          
+          : null
+        }
         {
           countryData? 
           <>

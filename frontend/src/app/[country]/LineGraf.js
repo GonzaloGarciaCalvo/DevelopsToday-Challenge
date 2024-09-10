@@ -33,7 +33,7 @@ function LineGraf ({lineChartData}) {
   console.log("lineChartData", lineChartData)
   ChartJS.defaults.color = '#FFFFFF';
   return (
-    <div className="p-2 xl:py-18 xl:px-24 flex justify-center">
+    <div className="p-2 xl:py-18 xl:px-24 flex justify-center ">
       <Line options={options} data={lineChartData} />
     </div>
   )
