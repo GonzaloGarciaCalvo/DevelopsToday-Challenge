@@ -114,3 +114,6 @@ We will be testing your application locally. Please ensure the following:
 - **Instructions for Running**: Provide clear instructions in the `README.md` file on how to start both the frontend and backend servers, including any necessary environment variables or configurations.
 
 By following these instructions, we will be able to test your application smoothly and verify that both parts work together as expected.
+
+
+http://localhost:4000/country?name=argentina&code=ar

@@ -69,7 +69,7 @@ export default function Page({ params }) {
           : null
         }
       </section>
-      <section className='px-2 md:px-8 xl:px-24'>
+      <section className='px-2 md:px-8 xl:px-2'>
         {countryData?.borders && <h2 className='text-2xl "px-1 xl:py-18 px-24"'>Border Countries</h2>}
         <div className='flex flex-row'>
           {
