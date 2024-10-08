@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
 import LineGraf from './LineGraf';
+import { Suspense } from 'react'
 
 export default function Page({ params }) {
   const { country } = params;
@@ -42,6 +43,7 @@ export default function Page({ params }) {
   };
 
   return (
+    
     <div>
       <section className='flex flex-row justify-center py-4 '>
         {
