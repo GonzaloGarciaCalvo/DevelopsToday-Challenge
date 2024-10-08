@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 export default async function Home() {
-
-  const rowCountries = await fetch('http://localhost:4000')
+  const URL = "https://developstoday-challenge.onrender.com"
+  /* const rowCountries = await fetch('http://localhost:4000') */
+  const rowCountries = await fetch(URL)
   const countries = await rowCountries.json()
 /* grid grid-rows-[20px_1fr_20px] items-center justify-items-center */
   return (

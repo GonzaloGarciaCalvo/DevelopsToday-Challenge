@@ -13,9 +13,10 @@ export default function Page({ params }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-
+    const BASE_URL = 'https://developstoday-challenge.onrender.com'
     async function getCountrieData () {
-      const rowCountryInfo = await fetch(`http://localhost:4000/country?name=${country}&code=${code}`) 
+      /* const rowCountryInfo = await fetch(`http://localhost:4000/country?name=${country}&code=${code}`)  */
+      const rowCountryInfo = await fetch(`${BASE_URL}/country?name=${country}&code=${code}`) 
       const countryInfo = await rowCountryInfo.json()
       setCountryData(countryInfo)
       setLoading(false)

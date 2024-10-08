@@ -1,4 +1,4 @@
-// File: C:\Users\HP\Desktop\Cursos NO CODERHOUSE\NODE\DevelopsToday-challenge\frontend2\src\app\layout.js
+// File: C:\Users\HP\Desktop\Cursos NO CODERHOUSE\NODE\DevelopsToday-challenge\frontend\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
