@@ -29,8 +29,6 @@ function LineGraf ({lineChartData}) {
           }
         }
       },}
-  console.log("GRAFICO")
-  console.log("lineChartData", lineChartData)
   ChartJS.defaults.color = '#FFFFFF';
   return (
     <div className="p-2 xl:py-18 xl:px-24 flex justify-center ">
