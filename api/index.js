@@ -13,8 +13,19 @@ app.use(bodyParser.urlencoded({ extended: true }))
   {origin:['http://localhost:3000', 'https://develops-today-challenge.vercel.app/']}
 )) */
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://localhost:3000, https://develops-today-challenge.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+}); */
+
+app.use((req, res, next) => {
+  const allowedOrigins = ['http://localhost:3000', 'https://develops-today-challenge.vercel.app'];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
   res.header('Access-Control-Allow-Methods', 'GET');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
