@@ -2,15 +2,13 @@
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
-/* import dynamic from 'next/dynamic' */
-/* const CountryData = dynamic(() => import('./countryData')) */
-import CountryData from './countryData';
+/* import CountryData from './countryData'; */
+import dynamic from 'next/dynamic';
+
+const CountryData = dynamic(() => import('./countryData'), { suspense: true });
 
 export default function Page({ params }) {
   const { country } = params;
-  /* const searchParams = useSearchParams()
-  const code = searchParams.get('code') */
-
 
   const MyFallback = () => {
     return(
@@ -21,7 +19,6 @@ export default function Page({ params }) {
         </div> 
       </section>
     )
-
   }
   return (
     <Suspense fallback={ <MyFallback /> }> 
@@ -29,10 +26,3 @@ export default function Page({ params }) {
     </Suspense>
   )
 }
-
-
-    /* 
-    return (
-      <CountryData code={code} country={country} />
-
-  )  */

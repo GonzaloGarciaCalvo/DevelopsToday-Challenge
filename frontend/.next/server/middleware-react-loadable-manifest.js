@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}";
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\[country]\\\\page.js -> ./countryData\":{\"id\":\"app\\\\[country]\\\\page.js -> ./countryData\",\"files\":[\"static/chunks/_app-pages-browser_src_app_country_countryData_js.js\"]}}"

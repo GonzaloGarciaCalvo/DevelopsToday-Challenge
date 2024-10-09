@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex-1`}
       >
-        <nav>
-          <Link href="/" className="text-xl px-6 pt-4 mt-2">Home</Link>
+        <nav className="px-6 py-4">
+          <Link href="/" className="text-xl ">Home</Link>
         </nav>
         {children}
         <footer className="text-center"> 
