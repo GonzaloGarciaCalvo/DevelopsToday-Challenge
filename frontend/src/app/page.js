@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Country } from "./components/country";
 
 export default async function Home() {
   const URL = "https://developstoday-challenge.onrender.com"
@@ -11,21 +12,11 @@ export default async function Home() {
       <main className="max-w-72 sm:max-w-full  flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <h1 className="w-full text-3xl font-bold text-center">Countries of The World</h1>
         <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-        {countries.map((country) => {
-          return (
-            <article 
-              key={country.countryCode} 
-              className="flex flex-col justify-center items-center bg-slate-700 rounded-md p-4"
-            >
-              <h2 className="text-xl md:text-2xl text-center flex flex-grow">{country.name}</h2>
-              <Link 
-                href={`/${country.name}?code=${country.countryCode}`} 
-                className="text-sm md:text-base rounded-lg px-2 my-2.5 bg-red-950 hover:bg-slate-800">
-                Details 
-              </Link>
-            </article>
-          )
-        })}
+          {countries.map((country) => {
+            return (
+              <Country key={country.countryCode} country={country} />
+            )
+          })}
         </section>
         </main>
     </div>

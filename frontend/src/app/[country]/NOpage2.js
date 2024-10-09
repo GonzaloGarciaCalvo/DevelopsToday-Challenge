@@ -8,8 +8,8 @@ import { Suspense } from 'react'
 
 export default function Page({ params }) {
   const { country } = params;
-  const searchParams = useSearchParams()
-  const code = searchParams.get('code')
+  /* const searchParams = useSearchParams()
+  const code = searchParams.get('code') */
   const [countryData, setCountryData] = useState("")
   const [loading, setLoading] = useState(true)
 

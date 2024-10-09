@@ -6,9 +6,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  experimental: {
+  /* experimental: {
     missingSuspenseWithCSRBailout: false,
-  },
+  }, */
 };
 
 export default nextConfig;
