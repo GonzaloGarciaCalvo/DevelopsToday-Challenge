@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
+/* import dynamic from 'next/dynamic' */
 /* const CountryData = dynamic(() => import('./countryData')) */
 import CountryData from './countryData';
 
@@ -12,9 +12,7 @@ export default function Page({ params }) {
   const code = searchParams.get('code') */
 
 
-  
   const MyFallback = () => {
-    /* console.log("fallback") */
     return(
       <section className='flex flex-row justify-center py-4 '>
         <div className='flex flex-col justify-center items-center min-h-screen'>
@@ -27,7 +25,7 @@ export default function Page({ params }) {
   }
   return (
     <Suspense fallback={ <MyFallback /> }> 
-      <CountryData /* code={code}  */country={country} />
+      <CountryData  country={country} />
     </Suspense>
   )
 }
