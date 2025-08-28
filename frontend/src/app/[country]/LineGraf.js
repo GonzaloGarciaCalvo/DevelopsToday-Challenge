@@ -25,7 +25,7 @@ function LineGraf ({lineChartData}) {
       plugins: {
         legend: {
           labels: {
-            color: 'white' // Cambia el color de la fuente de la leyenda
+            color: 'white'
           }
         }
       },}

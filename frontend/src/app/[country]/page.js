@@ -2,13 +2,13 @@
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
-/* import CountryData from './countryData'; */
 import dynamic from 'next/dynamic';
 
 const CountryData = dynamic(() => import('./countryData'), { suspense: true });
 
 export default function Page({ params }) {
-  const { country } = params;
+
+  const country = decodeURIComponent(params.country);
 
   const MyFallback = () => {
     return(

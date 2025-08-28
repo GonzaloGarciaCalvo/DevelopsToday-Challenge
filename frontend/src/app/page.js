@@ -1,12 +1,10 @@
-import Link from "next/link";
 import { Country } from "./components/country";
 
 export default async function Home() {
   const URL = "https://developstoday-challenge.onrender.com"
-  /* const rowCountries = await fetch('http://localhost:4000') */
   const rowCountries = await fetch(URL)
   const countries = await rowCountries.json()
-/* grid grid-rows-[20px_1fr_20px] items-center justify-items-center */
+
   return (
     <div className="w-full flex flex-row justify-center min-h-screen p-6 pb-5 sm:p-10 font-[family-name:var(--font-geist-sans)]">
       <main className="max-w-72 sm:max-w-full  flex flex-col gap-8 row-start-2 items-center sm:items-start">

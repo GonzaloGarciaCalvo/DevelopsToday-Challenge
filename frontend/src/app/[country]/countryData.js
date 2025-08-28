@@ -11,7 +11,7 @@ const CountryData = ({  country }) => {
   const code = searchParams.get('code')
 
   useEffect(() => {
-    console.log("en efecto")
+
     const BASE_URL = 'https://developstoday-challenge.onrender.com';
     async function getCountryData() {
       try {
@@ -19,9 +19,7 @@ const CountryData = ({  country }) => {
         const data = await response.json();
         setCountryData(data);
         setLoading(false);
-        console.log("getCountry")
       } catch (error) {
-          console.error('Error fetching country data:', error.message);
           setLoading(false);
       }
     }
@@ -55,7 +53,6 @@ const CountryData = ({  country }) => {
     )
   }
   
-
   return (
     <>
       <div className='flex justify-center'>
